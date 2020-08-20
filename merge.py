@@ -14,3 +14,5 @@ def merge_pdfs(result_name):
     with open(result_name, 'wb') as out:
         pdf_writer.write(out)
         print("PDF-Datei erfolgreich erstellt.")
+merge_pdfs('merged.pdf')
+
