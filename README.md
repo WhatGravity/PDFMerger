@@ -1,3 +1,3 @@
 # PDFMerger
 
-Programm to merge PDfs
+Programm to merge PDFs
