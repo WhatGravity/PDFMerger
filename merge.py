@@ -6,32 +6,31 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 root = Tk()
 
 
-# Sorry für den Spaghetticode!
-
-# Funktion, welche die GUI erstellt
 def openGUI():
-    # Erstellt den "Hintergrund"
-    root.title('PDF-Merge')
-    root.geometry("300x160")
+    # Erstellt das Fenster
+    root.title("PDF Merger")
+    root.geometry("300x300")
     root.resizable(False, False)
+
     # Text über dem Eingabe-Feld
     information_text = Label(root, text="Name des Output-Files")
     information_text.pack(side=TOP)
+
     # Eingabe-Feld für den Namen der PDF
     name_input = Entry(root, bd=5)
     name_input.pack(side=TOP)
+
     # Button, welcher die merge_pdfs() Funktion aufruft.
     b = Button(root, command=lambda: merge_pdfs(name_input.get() + ".pdf"), height=5, width=50, text="PDFs auswählen.",
                bg="#378dae", activebackground="#3d9dc2")
     b.pack(pady=2)
-    root.mainloop()
 
 
+root.mainloop()
 # Button, welcher später noch abgeändert wird, um den Benutzer über den Status des Programms zu informieren.
 output = Label(root, text="", fg="white")
 
 
-# Funktion, welche die PDF zusammenfügt.
 def merge_pdfs(result_name):
     try:
         # Stoppt die Funktion, wenn der User keinen Namen eingegeben hat.
@@ -59,7 +58,6 @@ def merge_pdfs(result_name):
         os.remove(result_name)
 
 
-# Eine Funktion, um den Text sowie die Farbe des output Buttons zu ändern.
 def change_btn(output_text, colour):
     output['text'] = output_text
     output['fg'] = colour
@@ -67,4 +65,3 @@ def change_btn(output_text, colour):
 
 
 openGUI()
-
