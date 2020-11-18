@@ -57,7 +57,7 @@ def merge_pdfs(result_name):
         # PDFs sind leer, wenn es einen Error gibt. Daher lösche ich sie mit der folgenden Zeile
         os.remove(result_name)
 
-
+# Eine Funktion, um den Text sowie die Farbe des output Buttons zu ändern.
 def change_btn(output_text, colour):
     output['text'] = output_text
     output['fg'] = colour
