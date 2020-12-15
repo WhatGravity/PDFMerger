@@ -14,8 +14,8 @@ def openGUI():
     name_input = Entry(root, bd=5)
     name_input.pack(side=TOP)
     # Button, welcher die merge_pdfs() Funktion aufruft.
-    b = Button(root, command=lambda: merge_pdfs(name_input.get() + ".pdf"), height=5, width=50, text="PDFs auswählen.",
-               bg="#378dae", activebackground="#3d9dc2")
+    b = Button(root, command=lambda: merge_pdfs(name_input.get() + ".pdf"), height=5, width=50, 
+    text="PDFs auswählen.", bg="#378dae", activebackground="#3d9dc2")
     b.pack(pady=2)
     root.mainloop()
 
